@@ -9,10 +9,11 @@ router.get('/', function (req, res) {
         for (let j = 0; j < 100; j++) {
             for (let k = 0; k < 10; k++) {
                 result = i + j + k + result;
+                console.log('spend some time');
             }
         }
     }
-    res.send('Hopefully taking some CPU cycles');
+    res.send('Hopefully taking some CPU cycles'+result);
 });
 
 module.exports = router;
